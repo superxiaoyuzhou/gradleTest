@@ -1,0 +1,16 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: gateway-zuul
+
+zuul:
+  ignoredServices: '*'
+  routes:
+    app-a:                          #名称随意，唯一就好
+      path: /hello/**
+      serviceId: provider-hello
+    app-sidecar:                  #通过sidecar调用nodejs的服务
+          path: /sidecar/**
+          serviceId: sidecar
+

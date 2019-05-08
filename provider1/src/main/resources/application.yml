@@ -1,0 +1,8 @@
+server:
+  port: 7900
+spring:
+  application:
+    name: provider-hello
+logging:
+  level:
+    root: INFO
